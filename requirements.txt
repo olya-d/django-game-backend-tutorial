@@ -1,0 +1,7 @@
+celery==3.1.19
+Django==1.8.7
+django-fsm==2.3.0
+djangorestframework==3.3.2
+ipython==4.0.1
+SwampDragon==0.4.2.2
+wheel==0.24.0

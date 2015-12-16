@@ -1,0 +1,45 @@
+{% load static swampdragon_tags %}
+<!DOCTYPE html>
+<html ng-app="GameApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+{% verbatim %}
+<div ng-controller="PlayerCtrl">
+  <ul>
+    <li ng-repeat="player in players">
+      {{ player.position_x }}
+      {{ player.position_y }}
+      <button type="button" ng-click="moveRight(player)">
+        Move right
+      </button>
+      <button type="button" ng-click="moveLeft(player)">
+        Move Left
+      </button>
+      <button type="button" ng-click="moveUp(player)">
+        Move Up
+      </button>
+      <button type="button" ng-click="moveDown(player)">
+        Move Down
+      </button>
+    </li>
+  </ul>
+</div>
+{% endverbatim %}
+
+<!-- AngularJS -->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular-route.js"></script>
+
+{% swampdragon_settings %}
+<script type="text/javascript" src="{% static 'swampdragon/js/dist/swampdragon.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'swampdragon/js/dist/datamapper.js' %}"></script>
+<script type="text/javascript" src="{% static 'swampdragon/js/angular/services.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'app.js' %}"></script>
+<script type="text/javascript" src="{% static 'controllers.js' %}"></script>
+
+</body>
